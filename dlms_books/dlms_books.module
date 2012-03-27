@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DLMS Books feature.
+ */
+
+include_once('dlms_books.features.inc');
