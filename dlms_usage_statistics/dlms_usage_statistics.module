@@ -5,3 +5,99 @@
  */
 
 include_once 'dlms_usage_statistics.features.inc';
+
+/**
+ * Implement hook_form_alter()
+ */
+function dlms_usage_statistics_form_alter(&$form, &$form_state, $form_id) {
+  // disable total fields in book_usage_statistics and readers_statistics
+
+  if ($form_id == 'book_usage_statistics_node_form') {
+    $form['field_book_usage_total']['und']['#disabled'] = TRUE;
+  }
+  
+  if ($form_id == 'readers_statistics_node_form') {
+    $form['field_total_readers']['und']['#disabled'] = TRUE;
+  }
+}
+
+/**
+ * Implement hook_node_presave
+ */
+function dlms_usage_statistics_node_presave($node) {
+  dpm($node);
+  if ($node->type == 'book_usage_statistics') {
+    // initialise a total count
+    $total = 0;
+    
+    if (!empty($node->field_000_generalities['und'][0]['value'])) {
+      $total += $node->field_000_generalities['und'][0]['value'];
+    }
+    
+    if (!empty($node->field_100_philosophy['und'][0]['value'])) {
+      $total += $node->field_100_philosophy['und'][0]['value'];
+    }
+    
+    if (!empty($node->field_200_religion['und'][0]['value'])) {
+      $total += $node->field_200_religion['und'][0]['value'];
+    }
+    
+    if (!empty($node->field_300_social_sciences['und'][0]['value'])) {
+      $total += $node->field_300_social_sciences['und'][0]['value'];
+    }
+    
+    if (!empty($node->field_400_language['und'][0]['value'])) {
+      $total += $node->field_400_language['und'][0]['value'];
+    }
+    
+    if (!empty($node->field_500_pure_sciences['und'][0]['value'])) {
+      $total += $node->field_500_pure_sciences['und'][0]['value'];
+    }
+    
+    if (!empty($node->field_600_technology['und'][0]['value'])) {
+      $total += $node->field_600_technology['und'][0]['value'];
+    }
+    
+    if (!empty($node->field_700_the_arts['und'][0]['value'])) {
+      $total += $node->field_700_the_arts['und'][0]['value'];
+    }
+    
+    if (!empty($node->field_800_literature['und'][0]['value'])) {
+      $total += $node->field_800_literature['und'][0]['value'];
+    }
+    
+    if (!empty($node->field_900_general_geography['und'][0]['value'])) {
+      $total += $node->field_900_general_geography['und'][0]['value'];
+    }
+    
+       
+    
+    // assign total
+    $node->field_book_usage_total['und'][0]['value'] = $total;
+  }
+  
+  if ($node->type == 'readers_statistics') {
+    
+  // initialise a total count
+    $total1 = 0;
+    
+     
+    if (!empty($node->field_morning_readers['und'][0]['value'])) {
+    $total1 += $node->field_morning_readers['und'][0]['value'];
+    }
+     
+    
+    if (!empty($node->field_afternoon_readers['und'][0]['value'])) {
+    $total1 += $node->field_afternoon_readers['und'][0]['value'];
+    }
+     
+     
+  if (!empty($node->field_evening_readers['und'][0]['value'])) {
+    $total1 += $node->field_evening_readers['und'][0]['value'];
+    }
+    
+    // assign total1
+    $node->field_total_readers['und'][0]['value'] = $total1;
+  }
+}
+

@@ -170,7 +170,7 @@ function dlms_books_field_default_fields() {
       'bundle' => 'book',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'You can not edit this field; value is calculated',
       'display' => array(
         'default' => array(
           'label' => 'inline',
@@ -1045,7 +1045,7 @@ function dlms_books_field_default_fields() {
           'edit_fallback' => 0,
           'fallback' => 'select',
           'node_link' => array(
-            'destination' => 'node',
+            'destination' => 'default',
             'full' => 1,
             'hover_title' => '',
             'teaser' => 0,
@@ -1172,7 +1172,7 @@ function dlms_books_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'borrow_return',
       'deleted' => '0',
-      'description' => '',
+      'description' => 'You can not enter a date; date is calculated automatically',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -1254,7 +1254,7 @@ function dlms_books_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'borrow_return',
       'deleted' => '0',
-      'description' => '',
+      'description' => 'You can not enter a date; date is calculated automatically',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -1324,6 +1324,8 @@ function dlms_books_field_default_fields() {
   t('Source');
   t('Status');
   t('Subject');
+  t('You can not edit this field; value is calculated');
+  t('You can not enter a date; date is calculated automatically');
 
   return $fields;
 }
