@@ -28,6 +28,13 @@ function dlms_books_form_alter(&$form, &$form_state, $form_id) {
       }
     }
   }
+  
+  // disable the Qty available field in the book create/edit form
+  if ($form_id == 'book_node_form') {
+    // dpm($form);
+    $form['field_book_available']['und']['#disabled'] = TRUE;
+    $form['field_book_available']['und']['#description'] = t('You can not edit this field; value is calculated');
+  }
 }
 
 /**

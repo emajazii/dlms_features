@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DLMS usage statistics feature.
+ */
+
+include_once 'dlms_usage_statistics.features.inc';
