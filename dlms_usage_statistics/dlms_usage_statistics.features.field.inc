@@ -721,7 +721,7 @@ function dlms_usage_statistics_field_default_fields() {
       'bundle' => 'book_usage_statistics',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Total cannot be entered, it is automatically calculated',
       'display' => array(
         'default' => array(
           'label' => 'inline',
@@ -874,7 +874,7 @@ function dlms_usage_statistics_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_evening_readers',
-      'label' => '4pm',
+      'label' => '3pm',
       'required' => 0,
       'settings' => array(
         'max' => '',
@@ -1059,7 +1059,7 @@ function dlms_usage_statistics_field_default_fields() {
       'bundle' => 'readers_statistics',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Total cannot be entered, it is automatically calculated',
       'display' => array(
         'default' => array(
           'label' => 'inline',
@@ -1109,8 +1109,8 @@ function dlms_usage_statistics_field_default_fields() {
   t('12am');
   t('200 ');
   t('300');
+  t('3pm');
   t('400');
-  t('4pm');
   t('500');
   t('600');
   t('700');
@@ -1118,6 +1118,7 @@ function dlms_usage_statistics_field_default_fields() {
   t('900');
   t('Date');
   t('Total');
+  t('Total cannot be entered, it is automatically calculated');
 
   return $fields;
 }

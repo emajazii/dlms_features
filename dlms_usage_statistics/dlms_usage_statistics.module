@@ -79,25 +79,25 @@ function dlms_usage_statistics_node_presave($node) {
   if ($node->type == 'readers_statistics') {
     
   // initialise a total count
-    $total1 = 0;
+    $total = 0;
     
      
     if (!empty($node->field_morning_readers['und'][0]['value'])) {
-    $total1 += $node->field_morning_readers['und'][0]['value'];
+      $total += $node->field_morning_readers['und'][0]['value'];
     }
      
     
     if (!empty($node->field_afternoon_readers['und'][0]['value'])) {
-    $total1 += $node->field_afternoon_readers['und'][0]['value'];
+      $total += $node->field_afternoon_readers['und'][0]['value'];
     }
      
      
-  if (!empty($node->field_evening_readers['und'][0]['value'])) {
-    $total1 += $node->field_evening_readers['und'][0]['value'];
+    if (!empty($node->field_evening_readers['und'][0]['value'])) {
+      $total += $node->field_evening_readers['und'][0]['value'];
     }
     
-    // assign total1
-    $node->field_total_readers['und'][0]['value'] = $total1;
+    // assign total
+    $node->field_total_readers['und'][0]['value'] = $total;
   }
 }
 
