@@ -25,7 +25,6 @@ function dlms_usage_statistics_form_alter(&$form, &$form_state, $form_id) {
  * Implement hook_node_presave
  */
 function dlms_usage_statistics_node_presave($node) {
-  dpm($node);
   if ($node->type == 'book_usage_statistics') {
     // initialise a total count
     $total = 0;

@@ -70,16 +70,6 @@ function dlms_books_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete terms in 2
-  $permissions['delete terms in 2'] = array(
-    'name' => 'delete terms in 2',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'librarian',
-    ),
-    'module' => 'taxonomy',
-  );
-
   // Exported permission: edit any book content
   $permissions['edit any book content'] = array(
     'name' => 'edit any book content',
@@ -118,16 +108,6 @@ function dlms_books_user_default_permissions() {
       1 => 'librarian',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: edit terms in 2
-  $permissions['edit terms in 2'] = array(
-    'name' => 'edit terms in 2',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'librarian',
-    ),
-    'module' => 'taxonomy',
   );
 
   return $permissions;

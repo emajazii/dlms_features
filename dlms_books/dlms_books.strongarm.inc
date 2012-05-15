@@ -13,27 +13,6 @@ function dlms_books_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'additional_settings__active_tab_book';
-  $strongarm->value = 'edit-nodeformsettings';
-  $export['additional_settings__active_tab_book'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'additional_settings__active_tab_borrow_return';
-  $strongarm->value = 'edit-auto-nodetitle';
-  $export['additional_settings__active_tab_borrow_return'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'ant_book';
-  $strongarm->value = '0';
-  $export['ant_book'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'ant_borrow_return';
   $strongarm->value = '1';
   $export['ant_borrow_return'] = $strongarm;
@@ -41,100 +20,9 @@ function dlms_books_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'ant_pattern_book';
-  $strongarm->value = '';
-  $export['ant_pattern_book'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'ant_pattern_borrow_return';
   $strongarm->value = '[node:field-book-title] borrowed by [node:field-borrower-name]';
   $export['ant_pattern_borrow_return'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'ant_php_book';
-  $strongarm->value = 0;
-  $export['ant_php_book'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'ant_php_borrow_return';
-  $strongarm->value = 0;
-  $export['ant_php_borrow_return'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'cfs_author_book';
-  $strongarm->value = '0';
-  $export['cfs_author_book'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'cfs_author_borrow_return';
-  $strongarm->value = '0';
-  $export['cfs_author_borrow_return'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'cfs_inputformat_book';
-  $strongarm->value = '0';
-  $export['cfs_inputformat_book'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'cfs_inputformat_borrow_return';
-  $strongarm->value = '0';
-  $export['cfs_inputformat_borrow_return'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'cfs_newadmin_book';
-  $strongarm->value = '1';
-  $export['cfs_newadmin_book'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'cfs_newadmin_borrow_return';
-  $strongarm->value = '1';
-  $export['cfs_newadmin_borrow_return'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'cfs_submit_book';
-  $strongarm->value = 'Submit';
-  $export['cfs_submit_book'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'cfs_submit_borrow_return';
-  $strongarm->value = 'Submit';
-  $export['cfs_submit_borrow_return'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'cfs_title_book';
-  $strongarm->value = '0';
-  $export['cfs_title_book'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'cfs_title_borrow_return';
-  $strongarm->value = '0';
-  $export['cfs_title_borrow_return'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -311,20 +199,6 @@ function dlms_books_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'nfs_hide_node_title_book';
-  $strongarm->value = '0';
-  $export['nfs_hide_node_title_book'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'nfs_hide_node_title_borrow_return';
-  $strongarm->value = '0';
-  $export['nfs_hide_node_title_borrow_return'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'nfs_inputformat_book';
   $strongarm->value = '1';
   $export['nfs_inputformat_book'] = $strongarm;
@@ -370,34 +244,6 @@ function dlms_books_strongarm() {
   $strongarm->name = 'nfs_submit_book';
   $strongarm->value = 'Submit';
   $export['nfs_submit_book'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'nfs_submit_borrow_return';
-  $strongarm->value = 'Save';
-  $export['nfs_submit_borrow_return'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'nfs_title_create_book';
-  $strongarm->value = 'Create !node_type';
-  $export['nfs_title_create_book'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'nfs_title_create_borrow_return';
-  $strongarm->value = 'Create !node_type';
-  $export['nfs_title_create_borrow_return'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'nfs_title_edit_book';
-  $strongarm->value = '!node_title';
-  $export['nfs_title_edit_book'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

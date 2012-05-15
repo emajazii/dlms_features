@@ -243,12 +243,14 @@ function dlms_books_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
-    'field_book_image' => 'title',
+    'field_book_image' => 'field_book_image',
     'title' => 'title',
     'field_book_authors' => 'field_book_authors',
     'field_book_subject' => 'field_book_subject',
     'field_class_no' => 'field_class_no',
     'field_book_available' => 'field_book_available',
+    'nid' => 'nid',
+    'nothing' => 'nothing',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
@@ -292,6 +294,18 @@ function dlms_books_views_default_views() {
       'separator' => '',
       'empty_column' => 0,
     ),
+    'nid' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'nothing' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
   );
   $handler->display->display_options['style_options']['override'] = 1;
   $handler->display->display_options['style_options']['sticky'] = 0;
@@ -300,6 +314,7 @@ function dlms_books_views_default_views() {
   $handler->display->display_options['fields']['field_book_image']['id'] = 'field_book_image';
   $handler->display->display_options['fields']['field_book_image']['table'] = 'field_data_field_book_image';
   $handler->display->display_options['fields']['field_book_image']['field'] = 'field_book_image';
+  $handler->display->display_options['fields']['field_book_image']['label'] = 'Title';
   $handler->display->display_options['fields']['field_book_image']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['field_book_image']['alter']['make_link'] = 0;
   $handler->display->display_options['fields']['field_book_image']['alter']['absolute'] = 0;
@@ -328,6 +343,7 @@ function dlms_books_views_default_views() {
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
   $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
@@ -341,7 +357,7 @@ function dlms_books_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['title']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['title']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['title']['hide_empty'] = 0;
   $handler->display->display_options['fields']['title']['empty_zero'] = 0;
@@ -450,6 +466,54 @@ function dlms_books_views_default_views() {
     'prefix_suffix' => 1,
   );
   $handler->display->display_options['fields']['field_book_available']['field_api_classes'] = 0;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['nid']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['nid']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['nid']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['nid']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['nid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['nid']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['nid']['link_to_node'] = 0;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = 'Action';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = 'Edit';
+  $handler->display->display_options['fields']['nothing']['alter']['make_link'] = 1;
+  $handler->display->display_options['fields']['nothing']['alter']['path'] = 'node/[nid]/edit';
+  $handler->display->display_options['fields']['nothing']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['nothing']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['nothing']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['nothing']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['nothing']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['nothing']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['nothing']['hide_alter_empty'] = 0;
   /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
@@ -774,13 +838,20 @@ function dlms_books_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
+    'field_book_image' => 'field_book_image',
     'field_book_title' => 'field_book_title',
     'field_borrower_name' => 'field_borrower_name',
     'field_due_date' => 'field_due_date',
-    'field_book_image' => 'field_book_title',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
+    'field_book_image' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
     'field_book_title' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
@@ -796,13 +867,6 @@ function dlms_books_views_default_views() {
       'empty_column' => 0,
     ),
     'field_due_date' => array(
-      'sortable' => 0,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_book_image' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
@@ -836,6 +900,7 @@ function dlms_books_views_default_views() {
   $handler->display->display_options['fields']['field_book_image']['table'] = 'field_data_field_book_image';
   $handler->display->display_options['fields']['field_book_image']['field'] = 'field_book_image';
   $handler->display->display_options['fields']['field_book_image']['relationship'] = 'field_book_title_nid';
+  $handler->display->display_options['fields']['field_book_image']['label'] = 'Book';
   $handler->display->display_options['fields']['field_book_image']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['field_book_image']['alter']['make_link'] = 0;
   $handler->display->display_options['fields']['field_book_image']['alter']['absolute'] = 0;
@@ -864,6 +929,7 @@ function dlms_books_views_default_views() {
   $handler->display->display_options['fields']['field_book_title']['id'] = 'field_book_title';
   $handler->display->display_options['fields']['field_book_title']['table'] = 'field_data_field_book_title';
   $handler->display->display_options['fields']['field_book_title']['field'] = 'field_book_title';
+  $handler->display->display_options['fields']['field_book_title']['label'] = '';
   $handler->display->display_options['fields']['field_book_title']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['field_book_title']['alter']['make_link'] = 0;
   $handler->display->display_options['fields']['field_book_title']['alter']['absolute'] = 0;
@@ -877,7 +943,7 @@ function dlms_books_views_default_views() {
   $handler->display->display_options['fields']['field_book_title']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['field_book_title']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['field_book_title']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['field_book_title']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['field_book_title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_book_title']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['field_book_title']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_book_title']['empty_zero'] = 0;
@@ -1130,7 +1196,7 @@ function dlms_books_views_default_views() {
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
-    'field_book_image' => 'field_book_title',
+    'field_book_image' => 'field_book_image',
     'field_book_title' => 'field_book_title',
     'field_borrower_name' => 'field_borrower_name',
     'field_due_date' => 'field_due_date',
@@ -1178,6 +1244,7 @@ function dlms_books_views_default_views() {
   $handler->display->display_options['fields']['field_book_image']['table'] = 'field_data_field_book_image';
   $handler->display->display_options['fields']['field_book_image']['field'] = 'field_book_image';
   $handler->display->display_options['fields']['field_book_image']['relationship'] = 'field_book_title_nid';
+  $handler->display->display_options['fields']['field_book_image']['label'] = 'Book';
   $handler->display->display_options['fields']['field_book_image']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['field_book_image']['alter']['make_link'] = 0;
   $handler->display->display_options['fields']['field_book_image']['alter']['absolute'] = 0;
@@ -1206,6 +1273,7 @@ function dlms_books_views_default_views() {
   $handler->display->display_options['fields']['field_book_title']['id'] = 'field_book_title';
   $handler->display->display_options['fields']['field_book_title']['table'] = 'field_data_field_book_title';
   $handler->display->display_options['fields']['field_book_title']['field'] = 'field_book_title';
+  $handler->display->display_options['fields']['field_book_title']['label'] = '';
   $handler->display->display_options['fields']['field_book_title']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['field_book_title']['alter']['make_link'] = 0;
   $handler->display->display_options['fields']['field_book_title']['alter']['absolute'] = 0;
@@ -1220,7 +1288,7 @@ function dlms_books_views_default_views() {
   $handler->display->display_options['fields']['field_book_title']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['field_book_title']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['field_book_title']['alter']['html'] = 1;
-  $handler->display->display_options['fields']['field_book_title']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['field_book_title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_book_title']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['field_book_title']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_book_title']['empty_zero'] = 0;
@@ -1468,16 +1536,29 @@ function dlms_books_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
+    'field_book_image' => 'field_book_image',
     'field_book_title' => 'field_book_title',
+    'nothing' => 'nothing',
     'field_borrower_name' => 'field_borrower_name',
     'field_due_date' => 'field_due_date',
-    'field_book_image' => 'field_book_title',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
+    'field_book_image' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
     'field_book_title' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'nothing' => array(
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -1490,13 +1571,6 @@ function dlms_books_views_default_views() {
       'empty_column' => 0,
     ),
     'field_due_date' => array(
-      'sortable' => 0,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_book_image' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
@@ -1531,6 +1605,7 @@ function dlms_books_views_default_views() {
   $handler->display->display_options['fields']['field_book_image']['table'] = 'field_data_field_book_image';
   $handler->display->display_options['fields']['field_book_image']['field'] = 'field_book_image';
   $handler->display->display_options['fields']['field_book_image']['relationship'] = 'field_book_title_nid';
+  $handler->display->display_options['fields']['field_book_image']['label'] = 'Book';
   $handler->display->display_options['fields']['field_book_image']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['field_book_image']['alter']['make_link'] = 0;
   $handler->display->display_options['fields']['field_book_image']['alter']['absolute'] = 0;
@@ -1544,7 +1619,7 @@ function dlms_books_views_default_views() {
   $handler->display->display_options['fields']['field_book_image']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['field_book_image']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['field_book_image']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['field_book_image']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['field_book_image']['element_label_colon'] = 0;
   $handler->display->display_options['fields']['field_book_image']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['field_book_image']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_book_image']['empty_zero'] = 0;
@@ -1559,6 +1634,7 @@ function dlms_books_views_default_views() {
   $handler->display->display_options['fields']['field_book_title']['id'] = 'field_book_title';
   $handler->display->display_options['fields']['field_book_title']['table'] = 'field_data_field_book_title';
   $handler->display->display_options['fields']['field_book_title']['field'] = 'field_book_title';
+  $handler->display->display_options['fields']['field_book_title']['label'] = '';
   $handler->display->display_options['fields']['field_book_title']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['field_book_title']['alter']['make_link'] = 0;
   $handler->display->display_options['fields']['field_book_title']['alter']['absolute'] = 0;
@@ -1566,18 +1642,43 @@ function dlms_books_views_default_views() {
   $handler->display->display_options['fields']['field_book_title']['alter']['replace_spaces'] = 0;
   $handler->display->display_options['fields']['field_book_title']['alter']['trim_whitespace'] = 0;
   $handler->display->display_options['fields']['field_book_title']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_book_title']['alter']['max_length'] = '100';
   $handler->display->display_options['fields']['field_book_title']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['field_book_title']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['field_book_title']['alter']['more_link'] = 0;
   $handler->display->display_options['fields']['field_book_title']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['field_book_title']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_book_title']['alter']['trim'] = 1;
   $handler->display->display_options['fields']['field_book_title']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['field_book_title']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['field_book_title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_book_title']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['field_book_title']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_book_title']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_book_title']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_book_title']['field_api_classes'] = 0;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = 'Book';
+  $handler->display->display_options['fields']['nothing']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<span class="book-image">[field_book_image]</span><span class="book-title">[field_book_title]</span>';
+  $handler->display->display_options['fields']['nothing']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['nothing']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['nothing']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['nothing']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['nothing']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['nothing']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['nothing']['hide_alter_empty'] = 0;
   /* Field: Content: Name */
   $handler->display->display_options['fields']['field_borrower_name']['id'] = 'field_borrower_name';
   $handler->display->display_options['fields']['field_borrower_name']['table'] = 'field_data_field_borrower_name';
@@ -1845,6 +1946,7 @@ function dlms_books_views_default_views() {
   $handler->display->display_options['fields']['field_book_image']['table'] = 'field_data_field_book_image';
   $handler->display->display_options['fields']['field_book_image']['field'] = 'field_book_image';
   $handler->display->display_options['fields']['field_book_image']['relationship'] = 'field_book_title_nid';
+  $handler->display->display_options['fields']['field_book_image']['label'] = 'Book';
   $handler->display->display_options['fields']['field_book_image']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['field_book_image']['alter']['make_link'] = 0;
   $handler->display->display_options['fields']['field_book_image']['alter']['absolute'] = 0;
@@ -1873,6 +1975,7 @@ function dlms_books_views_default_views() {
   $handler->display->display_options['fields']['field_book_title']['id'] = 'field_book_title';
   $handler->display->display_options['fields']['field_book_title']['table'] = 'field_data_field_book_title';
   $handler->display->display_options['fields']['field_book_title']['field'] = 'field_book_title';
+  $handler->display->display_options['fields']['field_book_title']['label'] = '';
   $handler->display->display_options['fields']['field_book_title']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['field_book_title']['alter']['make_link'] = 0;
   $handler->display->display_options['fields']['field_book_title']['alter']['absolute'] = 0;
@@ -1880,13 +1983,14 @@ function dlms_books_views_default_views() {
   $handler->display->display_options['fields']['field_book_title']['alter']['replace_spaces'] = 0;
   $handler->display->display_options['fields']['field_book_title']['alter']['trim_whitespace'] = 0;
   $handler->display->display_options['fields']['field_book_title']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_book_title']['alter']['max_length'] = '75';
   $handler->display->display_options['fields']['field_book_title']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['field_book_title']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['field_book_title']['alter']['more_link'] = 0;
   $handler->display->display_options['fields']['field_book_title']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['field_book_title']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['field_book_title']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['field_book_title']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['field_book_title']['alter']['html'] = 1;
+  $handler->display->display_options['fields']['field_book_title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_book_title']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['field_book_title']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_book_title']['empty_zero'] = 0;
@@ -1943,6 +2047,29 @@ function dlms_books_views_default_views() {
     'interval' => '1',
   );
   $handler->display->display_options['fields']['field_due_date']['field_api_classes'] = 0;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = 'This is Emana';
+  $handler->display->display_options['fields']['nothing']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['nothing']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['nothing']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['nothing']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['nothing']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['nothing']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['nothing']['hide_alter_empty'] = 0;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';

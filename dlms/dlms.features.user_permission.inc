@@ -35,6 +35,7 @@ function dlms_user_default_permissions() {
     'name' => 'access content overview',
     'roles' => array(
       0 => 'administrator',
+      1 => 'librarian',
     ),
     'module' => 'node',
   );
@@ -240,6 +241,7 @@ function dlms_user_default_permissions() {
     'name' => 'administer nodes',
     'roles' => array(
       0 => 'administrator',
+      1 => 'librarian',
     ),
     'module' => 'node',
   );
@@ -377,6 +379,7 @@ function dlms_user_default_permissions() {
     'name' => 'bypass node access',
     'roles' => array(
       0 => 'administrator',
+      1 => 'librarian',
     ),
     'module' => 'node',
   );
@@ -451,6 +454,9 @@ function dlms_user_default_permissions() {
     'name' => 'search content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'anonymous user',
+      2 => 'authenticated user',
+      3 => 'librarian',
     ),
     'module' => 'search',
   );
@@ -470,6 +476,9 @@ function dlms_user_default_permissions() {
     'name' => 'use advanced search',
     'roles' => array(
       0 => 'administrator',
+      1 => 'anonymous user',
+      2 => 'authenticated user',
+      3 => 'librarian',
     ),
     'module' => 'search',
   );
@@ -535,6 +544,7 @@ function dlms_user_default_permissions() {
     'name' => 'view own unpublished content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'librarian',
     ),
     'module' => 'node',
   );

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DLMS Journals feature.
+ */
+
+include_once 'dlms_journals.features.inc';

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DLMS_Manuals feature.
+ */
+
+include_once 'dlms_manuals.features.inc';

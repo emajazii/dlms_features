@@ -1,0 +1,19 @@
+div.dlms-user-message {
+  color: #FFF;
+}
+
+div.dlms-user-message a{
+  color: #FFF; 
+  text-decoration: none;
+}
+
+div.dlms-user-message a:hover{
+  color: #356600;
+}
+
+div.dlms-user-message span.dlms-user-name {
+  color: #356600;
+  font-style: italic;
+}
+
+/*#E6F5D8*/

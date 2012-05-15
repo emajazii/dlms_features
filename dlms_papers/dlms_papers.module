@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DLMS papers feature.
+ */
+
+include_once 'dlms_papers.features.inc';

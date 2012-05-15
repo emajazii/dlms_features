@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DLMS newspaper feature.
+ */
+
+include_once 'dlms_newspaper.features.inc';

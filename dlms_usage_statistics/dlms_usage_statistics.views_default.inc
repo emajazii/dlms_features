@@ -590,7 +590,6 @@ function dlms_usage_statistics_views_default_views() {
   $handler->display->display_options['fields']['field_evening_readers']['id'] = 'field_evening_readers';
   $handler->display->display_options['fields']['field_evening_readers']['table'] = 'field_data_field_evening_readers';
   $handler->display->display_options['fields']['field_evening_readers']['field'] = 'field_evening_readers';
-  $handler->display->display_options['fields']['field_evening_readers']['label'] = '4pm';
   $handler->display->display_options['fields']['field_evening_readers']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['field_evening_readers']['alter']['make_link'] = 0;
   $handler->display->display_options['fields']['field_evening_readers']['alter']['absolute'] = 0;

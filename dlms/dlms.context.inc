@@ -10,7 +10,7 @@
 function dlms_context_default_contexts() {
   $export = array();
 
-  $context = new stdClass;
+  $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'sitewide';
@@ -26,10 +26,22 @@ function dlms_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'dlms-dlms_user_message' => array(
+          'module' => 'dlms',
+          'delta' => 'dlms_user_message',
+          'region' => 'user_first',
+          'weight' => '-10',
+        ),
         'search-form' => array(
           'module' => 'search',
           'delta' => 'form',
           'region' => 'user_second',
+          'weight' => '-10',
+        ),
+        'nice_menus-1' => array(
+          'module' => 'nice_menus',
+          'delta' => 1,
+          'region' => 'menu',
           'weight' => '-10',
         ),
       ),

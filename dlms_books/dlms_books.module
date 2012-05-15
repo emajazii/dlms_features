@@ -12,11 +12,7 @@ include_once('dlms_books.features.inc');
  */
 function dlms_books_form_alter(&$form, &$form_state, $form_id) {
   // disable the date fields in the borrow return form
-  // dpm($form_id);
   if ($form_id == 'borrow_return_node_form') {
-    //dpm($form);
-    //dpm($form_state);
-    //dpm(field_info_fields());
     $fields = field_info_fields();
     foreach ($fields as $name => $field) {
       if ($field['type'] == 'datetime') {
@@ -31,7 +27,6 @@ function dlms_books_form_alter(&$form, &$form_state, $form_id) {
   
   // disable the Qty available field in the book create/edit form
   if ($form_id == 'book_node_form') {
-    // dpm($form);
     $form['field_book_available']['und']['#disabled'] = TRUE;
     $form['field_book_available']['und']['#description'] = t('You can not edit this field; value is calculated');
   }
@@ -43,11 +38,8 @@ function dlms_books_form_alter(&$form, &$form_state, $form_id) {
  */
 function dlms_books_node_validate($node, $form, &$form_state) {
   if ($node->type == 'borrow_return') {
-    //dpm(node_load($node->field_book_title['und'][0]['nid']));
-    //dpm($form);
-    //dpm($form_state);
     $ref = node_load($node->field_book_title['und'][0]['nid']);
-    //dpm($ref);
+    
     if ($ref->field_book_reference['und'][0]['value'] == 1) {
       form_set_error('field_book_title', t('This book is a reference material it cannot be borrowed. ' . l('Return to book page', 'node/' . $ref->nid)));
     }

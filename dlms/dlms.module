@@ -5,3 +5,65 @@
  */
 
 include_once('dlms.features.inc');
+
+/**
+ * Implement hook_block_info
+ */
+function dlms_block_info(){
+  $block = array();
+  
+  $block['dlms_user_message'] = array(
+    // The name of the block in the block admin page
+    'info' => t('DLMS user message'),
+    'cache' => DRUPAL_NO_CACHE,
+  );
+  
+  return $block;
+}
+
+/**
+ * Implement hook_block_view
+ */
+function dlms_block_view($delta = '') {
+  $block = array(
+   'subject' => '',
+   'content' => '',
+  );
+  
+  
+  if ($delta == 'dlms_user_message') {
+    // retrive global user object
+    global $user;
+    
+    // check if user is logged in
+    if (!$user->uid) {
+      $links = array(
+        '@login' => url('user/login'),
+        '@password' => url('user/password'),
+      );
+      
+      $messg = t('<a href="@login">Login</a> or <a href="@password">Request New Password</a>', $links);
+    }
+    else {
+      $links = array(
+        '@user' => $user->name,
+        '@view' => url('user/' . $user->uid),
+        '@edit' => url('user/' . $user->uid . '/edit'),
+        '@logout' => url('user/logout'),
+      );
+      
+      $messg =  t('<span class="dlms-user-name">Hello @user: </span><a href="@view">My account</a> | <a href="@edit">Edit</a> | <a href="@logout">Logout</a>', $links);
+    }
+    
+    $block['subject'] = t('User message');
+    $block['content'] = array(
+      '#markup' => $messg,
+      '#prefix' => '<div class="dlms-user-message">',
+      '#suffix' => '</div>',
+    );
+    
+    $block['content']['#attached']['css'][] = drupal_get_path('module', 'dlms') . '/dlms.css';
+  }
+  
+  return $block;
+}
