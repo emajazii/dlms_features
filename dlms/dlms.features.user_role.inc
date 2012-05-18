@@ -10,13 +10,13 @@
 function dlms_user_default_roles() {
   $roles = array();
 
-  // Exported role: administrator
+  // Exported role: administrator.
   $roles['administrator'] = array(
     'name' => 'administrator',
     'weight' => '2',
   );
 
-  // Exported role: librarian
+  // Exported role: librarian.
   $roles['librarian'] = array(
     'name' => 'librarian',
     'weight' => '3',

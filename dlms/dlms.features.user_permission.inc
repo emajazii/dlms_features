@@ -10,7 +10,7 @@
 function dlms_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: access administration pages
+  // Exported permission: access administration pages.
   $permissions['access administration pages'] = array(
     'name' => 'access administration pages',
     'roles' => array(
@@ -19,7 +19,7 @@ function dlms_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: access content
+  // Exported permission: access content.
   $permissions['access content'] = array(
     'name' => 'access content',
     'roles' => array(
@@ -30,7 +30,7 @@ function dlms_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: access content overview
+  // Exported permission: access content overview.
   $permissions['access content overview'] = array(
     'name' => 'access content overview',
     'roles' => array(
@@ -40,7 +40,7 @@ function dlms_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: access rules debug
+  // Exported permission: access rules debug.
   $permissions['access rules debug'] = array(
     'name' => 'access rules debug',
     'roles' => array(
@@ -49,7 +49,7 @@ function dlms_user_default_permissions() {
     'module' => 'rules',
   );
 
-  // Exported permission: access site in maintenance mode
+  // Exported permission: access site in maintenance mode.
   $permissions['access site in maintenance mode'] = array(
     'name' => 'access site in maintenance mode',
     'roles' => array(
@@ -58,7 +58,7 @@ function dlms_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: access site reports
+  // Exported permission: access site reports.
   $permissions['access site reports'] = array(
     'name' => 'access site reports',
     'roles' => array(
@@ -67,7 +67,7 @@ function dlms_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: access site-wide contact form
+  // Exported permission: access site-wide contact form.
   $permissions['access site-wide contact form'] = array(
     'name' => 'access site-wide contact form',
     'roles' => array(
@@ -76,7 +76,7 @@ function dlms_user_default_permissions() {
     'module' => 'contact',
   );
 
-  // Exported permission: access user contact forms
+  // Exported permission: access user contact forms.
   $permissions['access user contact forms'] = array(
     'name' => 'access user contact forms',
     'roles' => array(
@@ -85,7 +85,7 @@ function dlms_user_default_permissions() {
     'module' => 'contact',
   );
 
-  // Exported permission: access user profiles
+  // Exported permission: access user profiles.
   $permissions['access user profiles'] = array(
     'name' => 'access user profiles',
     'roles' => array(
@@ -95,7 +95,7 @@ function dlms_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: administer actions
+  // Exported permission: administer actions.
   $permissions['administer actions'] = array(
     'name' => 'administer actions',
     'roles' => array(
@@ -104,7 +104,7 @@ function dlms_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: administer advanced pane settings
+  // Exported permission: administer advanced pane settings.
   $permissions['administer advanced pane settings'] = array(
     'name' => 'administer advanced pane settings',
     'roles' => array(
@@ -113,7 +113,7 @@ function dlms_user_default_permissions() {
     'module' => 'panels',
   );
 
-  // Exported permission: administer blocks
+  // Exported permission: administer blocks.
   $permissions['administer blocks'] = array(
     'name' => 'administer blocks',
     'roles' => array(
@@ -122,7 +122,7 @@ function dlms_user_default_permissions() {
     'module' => 'block',
   );
 
-  // Exported permission: administer boxes
+  // Exported permission: administer boxes.
   $permissions['administer boxes'] = array(
     'name' => 'administer boxes',
     'roles' => array(
@@ -131,7 +131,7 @@ function dlms_user_default_permissions() {
     'module' => 'boxes',
   );
 
-  // Exported permission: administer contact forms
+  // Exported permission: administer contact forms.
   $permissions['administer contact forms'] = array(
     'name' => 'administer contact forms',
     'roles' => array(
@@ -140,7 +140,7 @@ function dlms_user_default_permissions() {
     'module' => 'contact',
   );
 
-  // Exported permission: administer content types
+  // Exported permission: administer content types.
   $permissions['administer content types'] = array(
     'name' => 'administer content types',
     'roles' => array(
@@ -149,7 +149,7 @@ function dlms_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: administer ctools access ruleset
+  // Exported permission: administer ctools access ruleset.
   $permissions['administer ctools access ruleset'] = array(
     'name' => 'administer ctools access ruleset',
     'roles' => array(
@@ -158,13 +158,14 @@ function dlms_user_default_permissions() {
     'module' => 'ctools_access_ruleset',
   );
 
-  // Exported permission: administer custom content
+  // Exported permission: administer custom content.
   $permissions['administer custom content'] = array(
     'name' => 'administer custom content',
     'roles' => array(),
+    'module' => 'ctools_custom_content',
   );
 
-  // Exported permission: administer date tools
+  // Exported permission: administer date tools.
   $permissions['administer date tools'] = array(
     'name' => 'administer date tools',
     'roles' => array(
@@ -173,7 +174,7 @@ function dlms_user_default_permissions() {
     'module' => 'date_tools',
   );
 
-  // Exported permission: administer delta
+  // Exported permission: administer delta.
   $permissions['administer delta'] = array(
     'name' => 'administer delta',
     'roles' => array(
@@ -182,7 +183,7 @@ function dlms_user_default_permissions() {
     'module' => 'delta_ui',
   );
 
-  // Exported permission: administer delta blocks
+  // Exported permission: administer delta blocks.
   $permissions['administer delta blocks'] = array(
     'name' => 'administer delta blocks',
     'roles' => array(
@@ -191,7 +192,7 @@ function dlms_user_default_permissions() {
     'module' => 'delta_blocks',
   );
 
-  // Exported permission: administer features
+  // Exported permission: administer features.
   $permissions['administer features'] = array(
     'name' => 'administer features',
     'roles' => array(
@@ -200,7 +201,7 @@ function dlms_user_default_permissions() {
     'module' => 'features',
   );
 
-  // Exported permission: administer filters
+  // Exported permission: administer filters.
   $permissions['administer filters'] = array(
     'name' => 'administer filters',
     'roles' => array(
@@ -209,7 +210,7 @@ function dlms_user_default_permissions() {
     'module' => 'filter',
   );
 
-  // Exported permission: administer image styles
+  // Exported permission: administer image styles.
   $permissions['administer image styles'] = array(
     'name' => 'administer image styles',
     'roles' => array(
@@ -218,7 +219,7 @@ function dlms_user_default_permissions() {
     'module' => 'image',
   );
 
-  // Exported permission: administer menu
+  // Exported permission: administer menu.
   $permissions['administer menu'] = array(
     'name' => 'administer menu',
     'roles' => array(
@@ -227,7 +228,7 @@ function dlms_user_default_permissions() {
     'module' => 'menu',
   );
 
-  // Exported permission: administer modules
+  // Exported permission: administer modules.
   $permissions['administer modules'] = array(
     'name' => 'administer modules',
     'roles' => array(
@@ -236,7 +237,7 @@ function dlms_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: administer nodes
+  // Exported permission: administer nodes.
   $permissions['administer nodes'] = array(
     'name' => 'administer nodes',
     'roles' => array(
@@ -246,7 +247,7 @@ function dlms_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: administer page manager
+  // Exported permission: administer page manager.
   $permissions['administer page manager'] = array(
     'name' => 'administer page manager',
     'roles' => array(
@@ -255,7 +256,7 @@ function dlms_user_default_permissions() {
     'module' => 'page_manager',
   );
 
-  // Exported permission: administer pane access
+  // Exported permission: administer pane access.
   $permissions['administer pane access'] = array(
     'name' => 'administer pane access',
     'roles' => array(
@@ -264,7 +265,7 @@ function dlms_user_default_permissions() {
     'module' => 'panels',
   );
 
-  // Exported permission: administer panels layouts
+  // Exported permission: administer panels layouts.
   $permissions['administer panels layouts'] = array(
     'name' => 'administer panels layouts',
     'roles' => array(
@@ -273,7 +274,7 @@ function dlms_user_default_permissions() {
     'module' => 'panels',
   );
 
-  // Exported permission: administer panels styles
+  // Exported permission: administer panels styles.
   $permissions['administer panels styles'] = array(
     'name' => 'administer panels styles',
     'roles' => array(
@@ -282,7 +283,7 @@ function dlms_user_default_permissions() {
     'module' => 'panels',
   );
 
-  // Exported permission: administer pathauto
+  // Exported permission: administer pathauto.
   $permissions['administer pathauto'] = array(
     'name' => 'administer pathauto',
     'roles' => array(
@@ -291,7 +292,7 @@ function dlms_user_default_permissions() {
     'module' => 'pathauto',
   );
 
-  // Exported permission: administer permissions
+  // Exported permission: administer permissions.
   $permissions['administer permissions'] = array(
     'name' => 'administer permissions',
     'roles' => array(
@@ -300,7 +301,7 @@ function dlms_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: administer rules
+  // Exported permission: administer rules.
   $permissions['administer rules'] = array(
     'name' => 'administer rules',
     'roles' => array(
@@ -309,7 +310,7 @@ function dlms_user_default_permissions() {
     'module' => 'rules',
   );
 
-  // Exported permission: administer search
+  // Exported permission: administer search.
   $permissions['administer search'] = array(
     'name' => 'administer search',
     'roles' => array(
@@ -318,7 +319,7 @@ function dlms_user_default_permissions() {
     'module' => 'search',
   );
 
-  // Exported permission: administer site configuration
+  // Exported permission: administer site configuration.
   $permissions['administer site configuration'] = array(
     'name' => 'administer site configuration',
     'roles' => array(
@@ -327,7 +328,7 @@ function dlms_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: administer software updates
+  // Exported permission: administer software updates.
   $permissions['administer software updates'] = array(
     'name' => 'administer software updates',
     'roles' => array(
@@ -336,7 +337,7 @@ function dlms_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: administer taxonomy
+  // Exported permission: administer taxonomy.
   $permissions['administer taxonomy'] = array(
     'name' => 'administer taxonomy',
     'roles' => array(
@@ -346,7 +347,7 @@ function dlms_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: administer themes
+  // Exported permission: administer themes.
   $permissions['administer themes'] = array(
     'name' => 'administer themes',
     'roles' => array(
@@ -355,7 +356,7 @@ function dlms_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: administer url aliases
+  // Exported permission: administer url aliases.
   $permissions['administer url aliases'] = array(
     'name' => 'administer url aliases',
     'roles' => array(
@@ -364,7 +365,7 @@ function dlms_user_default_permissions() {
     'module' => 'path',
   );
 
-  // Exported permission: administer users
+  // Exported permission: administer users.
   $permissions['administer users'] = array(
     'name' => 'administer users',
     'roles' => array(
@@ -374,7 +375,7 @@ function dlms_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: bypass node access
+  // Exported permission: bypass node access.
   $permissions['bypass node access'] = array(
     'name' => 'bypass node access',
     'roles' => array(
@@ -384,7 +385,7 @@ function dlms_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: bypass rules access
+  // Exported permission: bypass rules access.
   $permissions['bypass rules access'] = array(
     'name' => 'bypass rules access',
     'roles' => array(
@@ -393,7 +394,7 @@ function dlms_user_default_permissions() {
     'module' => 'rules',
   );
 
-  // Exported permission: cancel account
+  // Exported permission: cancel account.
   $permissions['cancel account'] = array(
     'name' => 'cancel account',
     'roles' => array(
@@ -403,7 +404,7 @@ function dlms_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: change own username
+  // Exported permission: change own username.
   $permissions['change own username'] = array(
     'name' => 'change own username',
     'roles' => array(
@@ -413,7 +414,7 @@ function dlms_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: create url aliases
+  // Exported permission: create url aliases.
   $permissions['create url aliases'] = array(
     'name' => 'create url aliases',
     'roles' => array(
@@ -422,7 +423,7 @@ function dlms_user_default_permissions() {
     'module' => 'path',
   );
 
-  // Exported permission: edit boxes
+  // Exported permission: edit boxes.
   $permissions['edit boxes'] = array(
     'name' => 'edit boxes',
     'roles' => array(
@@ -431,7 +432,7 @@ function dlms_user_default_permissions() {
     'module' => 'boxes',
   );
 
-  // Exported permission: manage features
+  // Exported permission: manage features.
   $permissions['manage features'] = array(
     'name' => 'manage features',
     'roles' => array(
@@ -440,7 +441,7 @@ function dlms_user_default_permissions() {
     'module' => 'features',
   );
 
-  // Exported permission: notify of path changes
+  // Exported permission: notify of path changes.
   $permissions['notify of path changes'] = array(
     'name' => 'notify of path changes',
     'roles' => array(
@@ -449,7 +450,7 @@ function dlms_user_default_permissions() {
     'module' => 'pathauto',
   );
 
-  // Exported permission: search content
+  // Exported permission: search content.
   $permissions['search content'] = array(
     'name' => 'search content',
     'roles' => array(
@@ -461,7 +462,7 @@ function dlms_user_default_permissions() {
     'module' => 'search',
   );
 
-  // Exported permission: select account cancellation method
+  // Exported permission: select account cancellation method.
   $permissions['select account cancellation method'] = array(
     'name' => 'select account cancellation method',
     'roles' => array(
@@ -471,7 +472,7 @@ function dlms_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: use advanced search
+  // Exported permission: use advanced search.
   $permissions['use advanced search'] = array(
     'name' => 'use advanced search',
     'roles' => array(
@@ -483,7 +484,7 @@ function dlms_user_default_permissions() {
     'module' => 'search',
   );
 
-  // Exported permission: use page manager
+  // Exported permission: use page manager.
   $permissions['use page manager'] = array(
     'name' => 'use page manager',
     'roles' => array(
@@ -492,7 +493,7 @@ function dlms_user_default_permissions() {
     'module' => 'page_manager',
   );
 
-  // Exported permission: use panels caching features
+  // Exported permission: use panels caching features.
   $permissions['use panels caching features'] = array(
     'name' => 'use panels caching features',
     'roles' => array(
@@ -501,7 +502,7 @@ function dlms_user_default_permissions() {
     'module' => 'panels',
   );
 
-  // Exported permission: use panels dashboard
+  // Exported permission: use panels dashboard.
   $permissions['use panels dashboard'] = array(
     'name' => 'use panels dashboard',
     'roles' => array(
@@ -510,7 +511,7 @@ function dlms_user_default_permissions() {
     'module' => 'panels',
   );
 
-  // Exported permission: use panels locks
+  // Exported permission: use panels locks.
   $permissions['use panels locks'] = array(
     'name' => 'use panels locks',
     'roles' => array(
@@ -519,7 +520,7 @@ function dlms_user_default_permissions() {
     'module' => 'panels',
   );
 
-  // Exported permission: use text format filtered_html
+  // Exported permission: use text format filtered_html.
   $permissions['use text format filtered_html'] = array(
     'name' => 'use text format filtered_html',
     'roles' => array(
@@ -530,7 +531,7 @@ function dlms_user_default_permissions() {
     'module' => 'filter',
   );
 
-  // Exported permission: use text format full_html
+  // Exported permission: use text format full_html.
   $permissions['use text format full_html'] = array(
     'name' => 'use text format full_html',
     'roles' => array(
@@ -539,7 +540,7 @@ function dlms_user_default_permissions() {
     'module' => 'filter',
   );
 
-  // Exported permission: view own unpublished content
+  // Exported permission: view own unpublished content.
   $permissions['view own unpublished content'] = array(
     'name' => 'view own unpublished content',
     'roles' => array(
@@ -549,7 +550,7 @@ function dlms_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: view pane admin links
+  // Exported permission: view pane admin links.
   $permissions['view pane admin links'] = array(
     'name' => 'view pane admin links',
     'roles' => array(
@@ -558,7 +559,7 @@ function dlms_user_default_permissions() {
     'module' => 'panels',
   );
 
-  // Exported permission: view the administration theme
+  // Exported permission: view the administration theme.
   $permissions['view the administration theme'] = array(
     'name' => 'view the administration theme',
     'roles' => array(

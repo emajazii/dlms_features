@@ -231,7 +231,7 @@ function dlms_papers_views_default_views() {
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['path'] = 'paper-listing';
   $handler->display->display_options['menu']['type'] = 'normal';
-  $handler->display->display_options['menu']['title'] = 'Paper';
+  $handler->display->display_options['menu']['title'] = 'Paper catalog';
   $handler->display->display_options['menu']['description'] = 'reports, conferences, symposiums and seminars';
   $handler->display->display_options['menu']['weight'] = '4';
   $handler->display->display_options['menu']['name'] = 'main-menu';

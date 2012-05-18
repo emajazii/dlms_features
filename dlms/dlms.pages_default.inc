@@ -16,7 +16,10 @@ function dlms_default_page_manager_pages() {
   $page->admin_title = 'Front page';
   $page->admin_description = '';
   $page->path = 'home';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(

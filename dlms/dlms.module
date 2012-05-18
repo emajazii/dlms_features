@@ -55,7 +55,8 @@ function dlms_block_view($delta = '') {
       $messg =  t('<span class="dlms-user-name">Hello @user: </span><a href="@view">My account</a> | <a href="@edit">Edit</a> | <a href="@logout">Logout</a>', $links);
     }
     
-    $block['subject'] = t('User message');
+    //$block['subject'] = t('User message');
+    $block['subject'] = '';
     $block['content'] = array(
       '#markup' => $messg,
       '#prefix' => '<div class="dlms-user-message">',
