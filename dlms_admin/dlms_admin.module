@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DLMS admin feature.
+ */
+
+include_once 'dlms_admin.features.inc';
