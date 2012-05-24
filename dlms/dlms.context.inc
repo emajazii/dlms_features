@@ -38,12 +38,6 @@ function dlms_context_default_contexts() {
           'region' => 'user_second',
           'weight' => '-10',
         ),
-        'nice_menus-1' => array(
-          'module' => 'nice_menus',
-          'delta' => 1,
-          'region' => 'menu',
-          'weight' => '-10',
-        ),
       ),
     ),
   );

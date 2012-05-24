@@ -102,5 +102,47 @@ function dlms_books_default_rules_configuration() {
       ]
     }
   }');
+  $items['rules_reset_qty_available_on_qty_edit'] = entity_import('rules_config', '{ "rules_reset_qty_available_on_qty_edit" : {
+      "LABEL" : "reset qty available on qty edit",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "book", "borrow return" ],
+      "REQUIRES" : [ "rules" ],
+      "ON" : [ "node_update" ],
+      "IF" : [
+        { "node_is_of_type" : { "node" : [ "node" ], "type" : { "value" : { "book" : "book" } } } },
+        { "NOT data_is" : {
+            "data" : [ "node-unchanged:field-book-quantity" ],
+            "value" : [ "node:field-book-quantity" ]
+          }
+        }
+      ],
+      "DO" : [
+        { "data_calc" : {
+            "USING" : {
+              "input_1" : [ "node-unchanged:field-book-quantity" ],
+              "op" : "-",
+              "input_2" : [ "node-unchanged:field-book-available" ]
+            },
+            "PROVIDE" : { "result" : { "borrowed_books" : "Borrowed books" } }
+          }
+        },
+        { "data_calc" : {
+            "USING" : {
+              "input_1" : [ "node:field-book-quantity" ],
+              "op" : "-",
+              "input_2" : [ "borrowed-books" ]
+            },
+            "PROVIDE" : { "result" : { "new_quantity_available" : "New quantity available" } }
+          }
+        },
+        { "data_set" : {
+            "data" : [ "node:field-book-available" ],
+            "value" : [ "new-quantity-available" ]
+          }
+        },
+        { "drupal_message" : { "message" : "We now have [node:field-book-available] [node:title] available" } }
+      ]
+    }
+  }');
   return $items;
 }

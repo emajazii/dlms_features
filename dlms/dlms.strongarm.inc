@@ -13,9 +13,9 @@ function dlms_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'admin_theme';
-  $strongarm->value = 'seven';
-  $export['admin_theme'] = $strongarm;
+  $strongarm->name = 'colorbox_login';
+  $strongarm->value = 1;
+  $export['colorbox_login'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -41,16 +41,16 @@ function dlms_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'nice_menus_menu_1';
-  $strongarm->value = 'main-menu';
-  $export['nice_menus_menu_1'] = $strongarm;
+  $strongarm->name = 'nice_menus_custom_css';
+  $strongarm->value = 'sites/all/themes/jazii/css/nice_menus.css';
+  $export['nice_menus_custom_css'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'nice_menus_name_1';
-  $strongarm->value = 'Nice menu 1';
-  $export['nice_menus_name_1'] = $strongarm;
+  $strongarm->name = 'nice_menus_js';
+  $strongarm->value = 1;
+  $export['nice_menus_js'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

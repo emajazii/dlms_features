@@ -27,5 +27,13 @@ function dlms_default_rules_configuration() {
       ]
     }
   }');
+  $items['rules_login_redirect'] = entity_import('rules_config', '{ "rules_login_redirect" : {
+      "LABEL" : "login redirect",
+      "PLUGIN" : "reaction rule",
+      "REQUIRES" : [ "rules" ],
+      "ON" : [ "user_login" ],
+      "DO" : [ { "redirect" : { "url" : "\\u003Cfront\\u003E" } } ]
+    }
+  }');
   return $items;
 }
