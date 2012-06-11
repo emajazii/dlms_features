@@ -48,4 +48,5 @@ features[variable][] = nfs_submit_newspaper
 features[variable][] = node_options_newspaper
 features[variable][] = node_preview_newspaper
 features[variable][] = node_submitted_newspaper
+features[variable][] = nodeformsettings_newspaper
 features[views_view][] = newspaper

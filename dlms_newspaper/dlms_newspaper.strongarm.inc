@@ -155,6 +155,28 @@ function dlms_newspaper_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'nodeformsettings_newspaper';
+  $strongarm->value = array(
+    'nfs_inputformat' => '1',
+    'nfs_revisionlog' => '2',
+    'nfs_author_information' => '1',
+    'nfs_path' => '1',
+    'nfs_publishingoptions' => '1',
+    'nfs_comments' => '1',
+    'nfs_cancel' => array(
+      'nfs_cancel_status' => '1',
+      'nfs_cancel_behaviour' => '0',
+    ),
+    'nfs_submit' => 'Submit',
+    'nfs_hide_node_title' => '1',
+    'nfs_title_create' => 'Create !node_type',
+    'nfs_title_edit' => '!node_title',
+  );
+  $export['nodeformsettings_newspaper'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_newspaper';
   $strongarm->value = array(
     0 => 'status',
