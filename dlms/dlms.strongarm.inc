@@ -41,13 +41,6 @@ function dlms_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'nice_menus_custom_css';
-  $strongarm->value = 'sites/all/themes/jazii/css/nice_menus.css';
-  $export['nice_menus_custom_css'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'nice_menus_js';
   $strongarm->value = 1;
   $export['nice_menus_js'] = $strongarm;
