@@ -47,10 +47,11 @@ function dlms_newspaper_views_default_views() {
   $handler->display->display_options['style_options']['override'] = 1;
   $handler->display->display_options['style_options']['sticky'] = 0;
   $handler->display->display_options['style_options']['empty_table'] = 0;
-  /* Field: Content: Title */
+  /* Field: Content: Newspaper */
   $handler->display->display_options['fields']['field_newspaper_title']['id'] = 'field_newspaper_title';
   $handler->display->display_options['fields']['field_newspaper_title']['table'] = 'field_data_field_newspaper_title';
   $handler->display->display_options['fields']['field_newspaper_title']['field'] = 'field_newspaper_title';
+  $handler->display->display_options['fields']['field_newspaper_title']['label'] = 'Title';
   $handler->display->display_options['fields']['field_newspaper_title']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['field_newspaper_title']['alter']['make_link'] = 0;
   $handler->display->display_options['fields']['field_newspaper_title']['alter']['absolute'] = 0;
@@ -160,7 +161,7 @@ function dlms_newspaper_views_default_views() {
   $handler->display->display_options['filters']['field_newspaper_publication_date_value']['expose']['identifier'] = 'field_newspaper_publication_date_value';
   $handler->display->display_options['filters']['field_newspaper_publication_date_value']['expose']['multiple'] = FALSE;
   $handler->display->display_options['filters']['field_newspaper_publication_date_value']['year_range'] = '1960:+0';
-  /* Filter criterion: Content: Title (field_newspaper_title) */
+  /* Filter criterion: Content: Newspaper (field_newspaper_title) */
   $handler->display->display_options['filters']['field_newspaper_title_tid']['id'] = 'field_newspaper_title_tid';
   $handler->display->display_options['filters']['field_newspaper_title_tid']['table'] = 'field_data_field_newspaper_title';
   $handler->display->display_options['filters']['field_newspaper_title_tid']['field'] = 'field_newspaper_title_tid';

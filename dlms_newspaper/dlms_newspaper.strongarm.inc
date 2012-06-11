@@ -13,6 +13,20 @@ function dlms_newspaper_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'ant_newspaper';
+  $strongarm->value = '1';
+  $export['ant_newspaper'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ant_pattern_newspaper';
+  $strongarm->value = '[node:field_newspaper_title] [node:field_newspaper_publication_date]';
+  $export['ant_pattern_newspaper'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_newspaper';
   $strongarm->value = 0;
   $export['comment_anonymous_newspaper'] = $strongarm;

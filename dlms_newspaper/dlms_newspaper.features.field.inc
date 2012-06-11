@@ -229,18 +229,15 @@ function dlms_newspaper_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_newspaper_title',
-      'label' => 'Title',
+      'label' => 'Newspaper',
       'required' => 1,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
       'widget' => array(
-        'active' => 0,
+        'active' => 1,
         'module' => 'options',
-        'settings' => array(
-          'autocomplete_path' => 'taxonomy/autocomplete',
-          'size' => 60,
-        ),
+        'settings' => array(),
         'type' => 'options_select',
         'weight' => '32',
       ),
@@ -249,9 +246,9 @@ function dlms_newspaper_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Newspaper');
   t('Publication Date');
   t('Receive date ');
-  t('Title');
 
   return $fields;
 }
