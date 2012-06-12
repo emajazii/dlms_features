@@ -62,7 +62,7 @@ function dlms_books_default_rules_configuration() {
             "value" : [ "node:field-book-quantity" ]
           }
         },
-        { "drupal_message" : { "message" : "We have [node:field-book-available] [node:title] available" } }
+        { "drupal_message" : { "message" : "We have [node:field-book-available] \\u0022[node:title]\\u0022 available" } }
       ]
     }
   }');

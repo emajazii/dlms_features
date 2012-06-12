@@ -40,8 +40,16 @@ function dlms_books_node_validate($node, $form, &$form_state) {
   if ($node->type == 'borrow_return') {
     $ref = node_load($node->field_book_title['und'][0]['nid']);
     
+    // ensure a reference material is not borrowed
     if ($ref->field_book_reference['und'][0]['value'] == 1) {
       form_set_error('field_book_title', t('This book is a reference material it cannot be borrowed. ' . l('Return to book page', 'node/' . $ref->nid)));
+    }
+    
+    // ensure that an unborrowed book cannot be returned
+    if (!$node->nid) {
+      if ($node->field_book_status['und'][0]['value'] == 'returned') {
+        form_set_error('field_book_status', t('You cannot return an unborrowed book'));
+      }
     }
   }
 }

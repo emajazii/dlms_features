@@ -36,7 +36,6 @@ features[ctools][] = page_manager:pages_default:1
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:1
-features[field][] = node-book-body
 features[field][] = node-book-field_book_authors
 features[field][] = node-book-field_book_available
 features[field][] = node-book-field_book_date
