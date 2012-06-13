@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DLMS Users feature.
+ */
+
+include_once 'dlms_users.features.inc';
